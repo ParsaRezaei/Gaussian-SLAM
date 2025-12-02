@@ -80,7 +80,7 @@ class TUM_RGBD(BaseDataset):
 
     def parse_list(self, filepath, skiprows=0):
         """ read list data """
-        return np.loadtxt(filepath, delimiter=' ', dtype=np.unicode_, skiprows=skiprows)
+        return np.loadtxt(filepath, delimiter=' ', dtype=np.str_, skiprows=skiprows)
 
     def associate_frames(self, tstamp_image, tstamp_depth, tstamp_pose, max_dt=0.08):
         """ pair images, depths, and poses """
